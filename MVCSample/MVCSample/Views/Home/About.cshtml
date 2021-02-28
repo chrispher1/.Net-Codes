@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+Section using Partial method
+<br/>
+@Html.Partial("PartialView1")
+<br />
+Section using RenderPartial method
+<br />
+@{ Html.RenderPartial("PartialView1");}
+<br/>
+======================================
+<br />
+@{
+    var d = @Html.Action("DisplayPartialView");
+    var displayText = d;
+    <text>Calling HTML.Action method
+        <br/>
+    @displayText
+    </text>
+}
+<br/>
+Calling.HTML.RenderAction method
+<br/>
+@{ 
+    Html.RenderAction("DisplayPartialView");
+}
+
+
